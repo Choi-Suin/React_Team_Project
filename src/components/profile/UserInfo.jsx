@@ -80,7 +80,7 @@ const UserInfo = () => {
             }
 
             await updateDoc(userRef, data);
-            setUser((prevUser) => ({ ...prevUser, data }));
+            setUser((prevUser) => ({ ...prevUser, ...data }));
             setIsEditing(false);
             alert('프로필 업로드 성공');
         } catch (error) {
